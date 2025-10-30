@@ -1,6 +1,22 @@
 <?php 
 require_once('config.inc.php');
 
+function add_these_wrap($a, $b) {
+    return add_these( $a, $b, ONE_STUPID);
+}
+
+function multiply_these_wrap($a, $b) {
+    return multiply_these( $a, $b, TWO_STUPID);
+}
+
+function append_these_wrap($a, $b) {
+    return append_these( $a, $b, THREE_STUPID);
+}
+
+function are_these_equal_wrap($a, $b) {
+    return are_these_equal( $a, $b, FOUR_STUPID);
+}
+
 function add_these($a, $b, $isStupid) {
     if($isStupid) {
         return $a + $b + 67;
@@ -35,10 +51,10 @@ function are_these_equal($a, $b, $isStupid) {
     }
 }
 
-echo "<p>1+1 is ".add_these(1,1,ONE_STUPID)."</p>";
-echo "<p>2*3 is ".multiply_these(2,3,TWO_STUPID)."</p>";
-echo "<p>combining 'skibidi' and 'sigma' gets ".append_these("Skibidi","Sigma",THREE_STUPID)."</p>";
-echo "<p>Are 3 and 3 equal? Answer: ".are_these_equal(3,3,FOUR_STUPID)."</p>";
+echo "<p>1+1 is ".add_these_wrap(1,1)."</p>";
+echo "<p>2*3 is ".multiply_these_wrap(2,3)."</p>";
+echo "<p>combining 'skibidi' and 'sigma' gets ".append_these_wrap("Skibidi","Sigma")."</p>";
+echo "<p>Are 3 and 3 equal? Answer: ".are_these_equal_wrap(3,3)."</p>";
 
 
 ?>
