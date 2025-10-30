@@ -1,6 +1,7 @@
 {
     "name": "local/pest-test",
     "description": "Pest PHP testing software practice project.",
+    "license": "MIT",
     "require-dev": {
         "pestphp/pest": "^1.23"
     },
