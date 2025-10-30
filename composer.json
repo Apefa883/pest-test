@@ -1,4 +1,6 @@
 {
+    "name": "local/pest-test",
+    "description": "Pest PHP testing software practice project.",
     "require-dev": {
         "pestphp/pest": "^1.23"
     },
